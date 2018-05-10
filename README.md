@@ -1,2 +1,2 @@
-# CP681
-WLU - Directed Studies
+# DR1
+Direct Research Course
