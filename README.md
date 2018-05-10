@@ -1,2 +1,1 @@
-# DR1
-Direct Research Course
+# CP681 - Directed Studies
