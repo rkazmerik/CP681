@@ -9,7 +9,7 @@ Ryan Kazmerik
 * Wrote a simple model (model.py) that computes the spaCy similarity score between each sample document and the rest of the corpus.
 
 ### Results:
-For each document in the corpus, the similarity to every other document is calculated, and the top three similar documents are shown.
+For each document in the corpus, the similarity to every other document is calculated (cosine similarity), and the top three similar documents are shown.
 
 <pre>
 Test 1 - Analysis
@@ -17,13 +17,17 @@ Test 1 - Analysis
  (u'Analysis', 0.9940898954322718),
  (u'Analysis', 0.9513261611607577)]
 
-Test 2 - Analysis
-[(u'Analysis', 1.0),
- (u'Analysis', 0.9974945618647215),
- (u'Analysis', 0.9584604169442155)]
+Test 12 - Summary
+[(u'Summary', 1.0),
+ (u'Summary', 0.9769093799574572),
+ (u'Summary', 0.9743131138148008)]
 
-Test 3 - Analysis
-[(u'Analysis', 1.0),
- (u'Analysis', 0.9853001042441596),
- (u'Analysis', 0.9778452694474005)]
+Test 15 - Correspondence
+[(u'Summary', 1.0), 
+  (u'Correspondence', 1.0), 
+  (u'Correspondence', 1.0)]
 </pre>
+
+Because the test document was sampled from the training documents, the first match should be the document itself with a similarity of 1.0 (identical).
+
+However, some results indicate 3 perfect matches (as in Test 15) and require further investigation.
