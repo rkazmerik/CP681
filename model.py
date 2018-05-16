@@ -7,8 +7,7 @@ import spacy
 from spacy import displacy
 
 es = Elasticsearch()
-nlp = spacy.load('en')
-#nlp = spacy.load('en_core_web_lg')
+nlp = spacy.load('en_core_web_lg')
 
 rawDocs = []
 res = es.search(index="docs",
